@@ -255,7 +255,7 @@ cs = 0;
 	input.seqname      = Ragel.@asciistring_from_mark! 
 @goto st1
 @label ctr83
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 	input.seqname      = Ragel.@asciistring_from_mark! 
 @goto st1
 @label st1
@@ -317,7 +317,7 @@ if ( data[1 + p ]) == 10
 end
 @goto st0
 @label ctr4
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st4
 @label st4
 p+= 1;
@@ -351,7 +351,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr7
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st6
 @label st6
 p+= 1;
@@ -399,7 +399,7 @@ if 32 <= ( data[1 + p ]) && ( data[1 + p ]) <= 126
 end
 @goto st0
 @label ctr12
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 	input.name         = Nullable{ASCIIString}(Ragel.@asciistring_from_mark!) 
 @goto st8
 @label ctr77
@@ -418,7 +418,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr16
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st9
 @label st9
 p+= 1;
@@ -496,7 +496,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr25
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st13
 @label st13
 p+= 1;
@@ -535,7 +535,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr30
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st15
 @label st15
 p+= 1;
@@ -574,7 +574,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr35
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st17
 @label st17
 p+= 1;
@@ -677,7 +677,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr45
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st21
 @label st21
 p+= 1;
@@ -749,7 +749,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr51
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st24
 @label st24
 p+= 1;
@@ -789,7 +789,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr44
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st26
 @label st26
 p+= 1;
@@ -828,7 +828,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr60
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st28
 @label st28
 p+= 1;
@@ -873,7 +873,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr66
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st30
 @label st30
 p+= 1;
@@ -904,7 +904,7 @@ end
 	input.state.linenum += 1 
 @goto st42
 @label ctr13
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 	input.name         = Nullable{ASCIIString}(Ragel.@asciistring_from_mark!) 
 	input.state.linenum += 1 
 @goto st42
@@ -986,12 +986,12 @@ end
 	yield = true
         # // fbreak causes will cause the pushmark action for the next seqname
         # // to be skipped, so we do it here
-        Ragel.@pushmark!
+        Ragel.@mark!
         	p+= 1; cs = 31; @goto _out
 
 
     
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 	input.seqname      = Ragel.@asciistring_from_mark! 
 @goto st31
 @label st31
@@ -1044,7 +1044,7 @@ end
 	input.last         = Ragel.@int64_from_mark! 
 @goto st33
 @label ctr14
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 	input.name         = Nullable{ASCIIString}(Ragel.@asciistring_from_mark!) 
 @goto st33
 @label ctr19
@@ -1100,12 +1100,12 @@ end
 	yield = true
         # // fbreak causes will cause the pushmark action for the next seqname
         # // to be skipped, so we do it here
-        Ragel.@pushmark!
+        Ragel.@mark!
         	p+= 1; cs = 34; @goto _out
 
 
     
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st34
 @label st34
 p+= 1;
@@ -1133,18 +1133,18 @@ if 33 <= ( data[1 + p ]) && ( data[1 + p ]) <= 126
 end
 @goto st0
 @label ctr85
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st35
 @label ctr88
 	yield = true
         # // fbreak causes will cause the pushmark action for the next seqname
         # // to be skipped, so we do it here
-        Ragel.@pushmark!
+        Ragel.@mark!
         	p+= 1; cs = 35; @goto _out
 
 
     
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st35
 @label st35
 p+= 1;
@@ -1232,7 +1232,7 @@ if 48 <= ( data[1 + p ]) && ( data[1 + p ]) <= 57
 end
 @goto st0
 @label ctr15
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st39
 @label st39
 p+= 1;
@@ -1256,7 +1256,7 @@ if 32 <= ( data[1 + p ]) && ( data[1 + p ]) <= 126
 end
 @goto st0
 @label ctr84
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st40
 @label st40
 p+= 1;
@@ -1375,7 +1375,7 @@ if p == eof
 	yield = true
         # // fbreak causes will cause the pushmark action for the next seqname
         # // to be skipped, so we do it here
-        Ragel.@pushmark!
+        Ragel.@mark!
         	p+= 1; cs = 0; @goto _out
 
 
