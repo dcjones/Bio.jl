@@ -168,7 +168,7 @@ cs = 0;
     
 @goto st1
 @label ctr21
-	append!(input.seqbuf, state.buffer, (Ragel.@popmark!), p) 
+	append!(input.seqbuf, state.reader.buffer, (Ragel.@unmark!), p) 
 	yield = true;
         	p+= 1; cs = 1; @goto _out
 
@@ -204,7 +204,7 @@ else
 end
 @goto ctr0
 @label ctr0
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st2
 @label st2
 p+= 1;
@@ -272,7 +272,7 @@ elseif ( ( data[1 + p ]) >= 12  )
 end
 @goto ctr6
 @label ctr6
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st4
 @label st4
 p+= 1;
@@ -311,10 +311,10 @@ end
 	input.state.linenum += 1 
 @goto st7
 @label ctr19
-	append!(input.seqbuf, state.buffer, (Ragel.@popmark!), p) 
+	append!(input.seqbuf, state.reader.buffer, (Ragel.@unmark!), p) 
 @goto st7
 @label ctr20
-	append!(input.seqbuf, state.buffer, (Ragel.@popmark!), p) 
+	append!(input.seqbuf, state.reader.buffer, (Ragel.@unmark!), p) 
 	input.state.linenum += 1 
 @goto st7
 @label st7
@@ -359,7 +359,7 @@ else
 end
 @goto ctr15
 @label ctr15
-	Ragel.@pushmark! 
+	Ragel.@mark! 
 @goto st8
 @label st8
 p+= 1;
@@ -449,7 +449,7 @@ if p == eof
 
 	break;
 	@case 8
-	append!(input.seqbuf, state.buffer, (Ragel.@popmark!), p) 
+	append!(input.seqbuf, state.reader.buffer, (Ragel.@unmark!), p) 
 	yield = true;
         	p+= 1; cs = 0; @goto _out
 
