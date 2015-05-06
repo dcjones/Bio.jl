@@ -3,9 +3,12 @@ module Intervals
 
 import Base: show, isless, push!, intersect, start, next, done, length,
              convert, read, read!, ==
-using Base.Intrinsics, Compat, Color, Docile, IntervalTrees
+
 import Iterators
 #using DataStructures
+using Base.Intrinsics
+using Color
+using Compat
 using Docile
 using Docile: @doc, @doc_str
 using IntervalTrees
