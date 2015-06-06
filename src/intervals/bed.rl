@@ -187,14 +187,14 @@ function takevalue!(input::BEDParser)
                                     input.block_count, input.block_sizes,
                                     input.block_firsts))
     input.strand = STRAND_NA
-    name = Nullable{ASCIIString}()
-    score = Nullable{Int}()
-    thick_first = Nullable{Int}()
-    thick_last = Nullable{Int};()
-    item_rgb = Nullable{RGB{Float32}};()
-    block_count = Nullable{Int}()
-    block_sizes = Nullable{Vector{Int}}()
-    block_firsts = Nullable{Vector{Int}}()
+    input.name = Nullable{ASCIIString}()
+    input.score = Nullable{Int}()
+    input.thick_first = Nullable{Int}()
+    input.thick_last = Nullable{Int}()
+    input.item_rgb = Nullable{RGB{Float32}}()
+    input.block_count = Nullable{Int}()
+    input.block_sizes = Nullable{Vector{Int}}()
+    input.block_firsts = Nullable{Vector{Int}}()
 
     return value
 end
@@ -324,7 +324,7 @@ function write_optional_fields(out::IO, interval::BEDInterval, leadingtab::Bool=
     else return end
 
     if !isnull(interval.metadata.item_rgb)
-        item_rgb = get(interval.metadata.thick_last)
+        item_rgb = get(interval.metadata.item_rgb)
         print(out, '\t', item_rgb.r, ',', item_rgb.g, ',', item_rgb.b)
     else return end
 
