@@ -59,7 +59,8 @@ end
 
 function ensureroom!(buf::Buffer, n::Integer)
     if buf.pos + n > length(buf.data)
-        resize!(buf.data, 2 * length(buf.data))
+        newsize = max(2 * length(buf.data), buf.pos + n)
+        resize!(buf.data, newsize)
     end
 end
 
