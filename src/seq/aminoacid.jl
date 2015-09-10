@@ -372,12 +372,10 @@ end
 
 start(seq::AminoAcidSequence) = seq.part.start
 
-
 function next(seq::AminoAcidSequence, i)
     aa = seq.data[i]
     return (aa, i + 1)
 end
-
 
 done(seq::AminoAcidSequence, i) = (i > seq.part.stop)
 
